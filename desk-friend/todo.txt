@@ -1,0 +1,4 @@
+Add tailscale auth key to file (find where it's kept? probably not the preauthkey...)
+figure out how to do the same thing with the other headscale clients. klara.nz, eliza.nz, fem.nz host - those can be migrated to nixos and then have workloads transferred to them (by zones of disuse)
+configure k3s server in aus
+set up longhorn (tagging)
