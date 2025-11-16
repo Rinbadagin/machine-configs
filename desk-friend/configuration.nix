@@ -51,8 +51,8 @@
   services.tailscale = {
     enable = true;
     authKeyFile = config.age.secrets."tailscale-authkey.age".path;
-    authKeyParameters.preauthorized = true;
-    extraUpFlags = [ "--login-server https://hs.fem.nz"];
+#    authKeyParameters.preauthorized = true;
+    extraUpFlags = [ "--login-server" "https://hs.fem.nz/" ];
   };
 
   networking = {
@@ -65,11 +65,11 @@
 #ssid="disconet";
           pskRaw = "1bfc343772e8153034c0d253b288835881c347eba1492627490abeb425f02c7d";
         };
-# Homelander = {
+        Homelander = {
 # generated with wpa_passphrase <ssid> <psk>
 # ssid="Homelander"
-#   pskRaw = "2d4cd2ce56c462533ce0cd8a1b44502db2c94212ce106795724efbeea9a6c002";
-# };
+          pskRaw = "2d4cd2ce56c462533ce0cd8a1b44502db2c94212ce106795724efbeea9a6c002";
+        };
       };
     };
   };
