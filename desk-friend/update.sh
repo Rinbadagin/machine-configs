@@ -7,7 +7,7 @@ echo $commit_msg
 nix flake lock
 git add .
 git commit -m "${commit_msg}"
-nixos-rebuild switch --flake ".#deskFriend" --target-host "root@desk-friend"
+nixos-rebuild switch --flake ".#deskFriend" --target-host "root@desk-friend-aertogig"
 
 if [ $? -eq 0 ]; then
   echo "Success. Pushing (latest: $commit_msg )"
