@@ -8,5 +8,5 @@ let
   ];
 in
 {
-  "example.age".publicKeys = keys;
+  "tailscale-authkey.age".publicKeys = keys;
 }
