@@ -51,6 +51,8 @@
   services.tailscale = {
     enable = true;
     authKeyFile = config.age.secrets."tailscale-authkey.age".path;
+    authKeyParameters.preauthorized = true;
+    extraUpFlags = [ "--login-server https://hs.fem.nz"];
   };
 
   networking = {
