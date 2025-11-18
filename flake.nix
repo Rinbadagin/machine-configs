@@ -18,8 +18,9 @@
       system = "x86_64-linux";
       modules = [
         disko.nixosModules.disko
-        ./configuration.nix
-        ./hardware-configuration.nix
+        ./desk-friend/configuration.nix
+        ./desk-friend/hardware-configuration.nix
+        ./base/configuration.nix
         agenix.nixosModules.default
 
         {
