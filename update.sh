@@ -20,14 +20,26 @@ echo "Commit message?"
 commit_msg=$(read -e)
 nix flake lock
 git add .
-git commit -m "${commit_msg}"
+if [ -z "${commit_msg}" ]; then
+  git commit -m "${commit_msg}"
+fi
+
+echo "nixos-rebuild switch --flake '.#${flake}' --target-host '${host}'"
 nixos-rebuild switch --flake ".#${flake}" --target-host "${host}"
 
 if [ $? -eq 0 ]; then
-  echo "Success. Pushing (latest: ${commit_msg})"
-  git push
+  if [ -z "${commit_msg}" ]; then
+    echo "Success. No commit message, leaving as is"
+  else
+    echo "Pushing (latest: ${commit_msg})"
+    git push
+  fi
 else
-  echo "Failure. Resetting softly. Commit: ${commit_msg}"
-  git reset --soft HEAD~1
+  if [ -z "${commit_msg}" ]; then
+    echo "Failure. No commit message, leaving as is"
+  else
+    echo "Resetting softly. Commit: ${commit_msg}"
+    git reset --soft HEAD~1
+  fi
 fi
 

@@ -5,6 +5,9 @@ let
 
     # host ed25519 pubkey
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDohTbLr6SW9DDXekhHDrD+RoKf0u5hyYvuHu9Su+lF7 root@nixos"
+
+    # dusty-cobweb pubkey
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMgEflZNpuj93w/qqm/l9sNObr9q5PnYpm/ya+ME7vxq root@dusty-cobweb"
   ];
 in
 {

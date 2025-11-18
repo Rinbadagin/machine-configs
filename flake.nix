@@ -28,5 +28,19 @@
         }
       ];
     };
+
+    nixosConfigurations.dusty-cobweb = nixpkgs.lib.nixosSystem {
+      system = "aarch64-linux";
+      modules = [
+        disko.nixosModules.disko
+        ./dusty-cobweb/configuration.nix
+        ./base/configuration.nix
+        agenix.nixosModules.default
+
+        {
+          environment.systemPackages = [ agenix.packages."aarch64-linux".default ];
+        }
+      ];
+    };
   };
 }
