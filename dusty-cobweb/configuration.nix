@@ -12,6 +12,18 @@
 
   networking = {
     hostName = "dusty-cobweb";
+
+    firewall = {
+      # from https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/networking/cluster/k3s/docs/USAGE.md
+      # for k3s inbound
+      allowedTCPPorts = [ 6443 ];
+    };
+  };
+
+  services.k3s = {
+    enable = true;
+    role = "server";
+    tokenFile = config.age.secrets."k3s-server-token.age".path;
   };
 
 

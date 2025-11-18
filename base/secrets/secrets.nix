@@ -12,4 +12,5 @@ let
 in
 {
   "tailscale-authkey.age".publicKeys = keys;
+  "k3s-server-token.age".publicKeys = keys;
 }

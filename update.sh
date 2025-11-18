@@ -20,7 +20,7 @@ echo "Commit message?"
 commit_msg=$(read -e)
 nix flake lock
 git add .
-if [ -z "${commit_msg}" ]; then
+if ! [ -z "${commit_msg}" ]; then
   git commit -m "${commit_msg}"
 fi
 
