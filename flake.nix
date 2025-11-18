@@ -14,7 +14,7 @@
     ...
   }:
   {
-    nixosConfigurations.deskFriend = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.desk-friend = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         disko.nixosModules.disko
