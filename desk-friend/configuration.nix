@@ -35,6 +35,13 @@
   services.radarr = {
     enable = true;
   };
+  
+  services.readarr = {
+    enable = true;
+    # settings could be populated automatically with public metadata instance here
+    # instance/settings/development setting 'Metadata Provider Source' to https://api.bookinfo.pro/
+    # https://github.com/blampe/rreading-glasses?tab=readme-ov-file
+  };
 
   services.prowlarr = {
     enable = true;
@@ -45,11 +52,20 @@
     package = pkgs.transmission_4;
   };
 
-  services.readarr = {
-    enable = true;
-    # settings could be populated automatically with public metadata instance here
-    # instance/settings/development setting 'Metadata Provider Source' to https://api.bookinfo.pro/
-    # https://github.com/blampe/rreading-glasses?tab=readme-ov-file
+  users.users.lidarr = {
+    extraGroups = [ "transmission" ];
+  };
+
+  users.users.sonarr = {
+    extraGroups = [ "transmission" ];
+  };
+
+  users.users.radarr = {
+    extraGroups = [ "transmission" ];
+  };
+
+  users.users.readarr = {
+    extraGroups = [ "transmission" ];
   };
 
   system.stateVersion = "25.05";
