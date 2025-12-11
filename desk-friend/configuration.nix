@@ -14,6 +14,7 @@
 
   networking = {
     hostName = "desk-friend";
+    nameservers = [ "1.1.1.1" "8.8.8.8" ];
   };
 
   services.k3s = {
