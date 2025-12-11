@@ -40,6 +40,10 @@
     enable = true;
   };
 
+  services.transmission = {
+    enable = true;
+  };
+
   services.readarr = {
     enable = true;
     # settings could be populated automatically with public metadata instance here
