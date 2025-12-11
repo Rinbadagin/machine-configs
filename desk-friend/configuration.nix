@@ -50,7 +50,7 @@
   services.transmission = {
     enable = true;
     package = pkgs.transmission_4;
-#    openPeerPorts = true;
+    openPeerPorts = true;
     openRPCPort = true;
     settings.rpc-bind-address = "0.0.0.0";
   };
