@@ -50,6 +50,8 @@
   services.transmission = {
     enable = true;
     package = pkgs.transmission_4;
+#    openPeerPorts = true;
+    openRPCPort = true;
   };
 
   users.users.lidarr = {
