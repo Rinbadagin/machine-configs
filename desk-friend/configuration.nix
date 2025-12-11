@@ -35,5 +35,12 @@
     enable = true;
   };
 
+  services.readarr = {
+    enable = true;
+    # settings could be populated automatically with public metadata instance here
+    # instance/settings/development setting 'Metadata Provider Source' to https://api.bookinfo.pro/
+    # https://github.com/blampe/rreading-glasses?tab=readme-ov-file
+  };
+
   system.stateVersion = "25.05";
 }
