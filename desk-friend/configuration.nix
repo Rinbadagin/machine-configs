@@ -55,6 +55,12 @@
     settings.rpc-bind-address = "0.0.0.0";
   };
 
+  services.flood = {
+    enable = true;
+    openFirewall = true;
+    host = "0.0.0.0";
+  };
+
   users.users.lidarr = {
     extraGroups = [ "transmission" ];
   };
