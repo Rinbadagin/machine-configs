@@ -29,8 +29,9 @@
 
   environment.systemPackages = map lib.lowPrio [
     pkgs.curl
-      pkgs.gitMinimal
-      pkgs.neofetch
+    pkgs.gitMinimal
+    pkgs.neofetch
+    pkgs.nfs-utils
   ];
 
   users.users.root.openssh.authorizedKeys.keys =
@@ -39,13 +40,13 @@
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAPurq4HYYHK0nxukQQAXm9mxlJ2/3plx79z0ckP3q/Q"
     ] ++ (args.extraPublicKeys or []); # this is used for unit-testing this module and can be removed if not needed
 
-    services.openssh = {
-      enable = true;
+  services.openssh = {
+    enable = true;
 # require public key authentication for better security
-      settings.PasswordAuthentication = false;
-      settings.KbdInteractiveAuthentication = false;
-      settings.PermitRootLogin = "yes";
-    };
+    settings.PasswordAuthentication = false;
+    settings.KbdInteractiveAuthentication = false;
+    settings.PermitRootLogin = "yes";
+  };
 
   services.tailscale = {
     enable = true;

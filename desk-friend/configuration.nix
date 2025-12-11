@@ -23,5 +23,17 @@
     serverAddr = "https://dusty-cobweb:6443";
   };
 
+  services.lidarr = {
+    enable = true;
+  };
+
+  services.sonarr = {
+    enable = true;
+  };
+
+  services.prowlarr = {
+    enable = true;
+  };
+
   system.stateVersion = "25.05";
 }
