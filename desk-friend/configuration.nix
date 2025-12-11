@@ -31,6 +31,10 @@
     enable = true;
   };
 
+  services.radarr = {
+    enable = true;
+  };
+
   services.prowlarr = {
     enable = true;
   };
