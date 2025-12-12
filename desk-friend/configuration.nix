@@ -58,6 +58,10 @@
     host = "0.0.0.0";
   };
 
+  services.dashy = {
+    enable = true;
+  };
+
   users.users.lidarr = {
     extraGroups = [ "qbittorrent" ];
   };
