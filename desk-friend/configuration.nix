@@ -58,8 +58,10 @@
     host = "0.0.0.0";
   };
 
-  services.dashy = {
+  services.homepage-dashboard = {
     enable = true;
+    openFirewall = true;
+    allowedHosts = "localhost,100.64.0.9,desk-friend";
   };
 
   users.users.lidarr = {
