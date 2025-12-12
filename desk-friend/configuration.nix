@@ -75,7 +75,9 @@
         {
           "desk-friend utils" = [
             {
-              widgets = [
+              "*arrs" = {
+                description = "starr programs for nomnomnom";
+                widgets = [
                 {
                   type = "sonarr";
                   url = "http://desk-friend:8989";
@@ -96,7 +98,8 @@
                   url = "http://desk-friend:8787";
                   key = "cb4fb2bae86b49779dc133f2444e9398";
                 }
-              ];
+                ];
+              };
             }
           ];
         }
