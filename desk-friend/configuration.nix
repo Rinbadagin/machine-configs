@@ -61,7 +61,7 @@
   services.homepage-dashboard = {
     enable = true;
     openFirewall = true;
-    allowedHosts = "localhost,100.64.0.9,desk-friend";
+    allowedHosts = "localhost:8082,100.64.0.9:8082,desk-friend:8082";
   };
 
   users.users.lidarr = {
