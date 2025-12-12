@@ -47,13 +47,9 @@
     enable = true;
   };
 
-  services.transmission = {
+  services.qbittorrent = {
     enable = true;
-    package = pkgs.transmission_3;
-#    package = pkgs.transmission_4;
-    openPeerPorts = true;
-    openRPCPort = true;
-    settings.rpc-bind-address = "0.0.0.0";
+    openFirewall = true;
   };
 
   services.flood = {
@@ -63,19 +59,19 @@
   };
 
   users.users.lidarr = {
-    extraGroups = [ "transmission" ];
+    extraGroups = [ "qbittorrent" ];
   };
 
   users.users.sonarr = {
-    extraGroups = [ "transmission" ];
+    extraGroups = [ "qbittorrent" ];
   };
 
   users.users.radarr = {
-    extraGroups = [ "transmission" ];
+    extraGroups = [ "qbittorrent" ];
   };
 
   users.users.readarr = {
-    extraGroups = [ "transmission" ];
+    extraGroups = [ "qbittorrent" ];
   };
 
   system.stateVersion = "25.05";
