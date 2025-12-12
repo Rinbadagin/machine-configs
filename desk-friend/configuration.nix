@@ -96,9 +96,9 @@
                   url = "http://desk-friend:8787";
                   key = "cb4fb2bae86b49779dc133f2444e9398";
                 }
-              ]
+              ];
             }
-          ]
+          ];
         }
     ];
   };
