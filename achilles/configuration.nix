@@ -250,42 +250,42 @@
     ];
   };
 
-  home-manager.users.klara = {
-    programs.zsh = { enable = true;
-      enableCompletion = true;
-      autocd = true;
-      initExtra = "export PATH=$PATH:/home/klara/.local/share/gem/ruby/3.3.7/bin;source ~/.frob_zsh_conf.sh\n";
-      syntaxHighlighting.enable = true;
-      enableAutosuggestions = true;
-      history.size = 100000;
+  #home-manager.users.klara = {
+  #  programs.zsh = { enable = true;
+  #    enableCompletion = true;
+  #    autocd = true;
+  #    initExtra = "export PATH=$PATH:/home/klara/.local/share/gem/ruby/3.3.7/bin;source ~/.frob_zsh_conf.sh\n";
+  #    syntaxHighlighting.enable = true;
+  #    enableAutosuggestions = true;
+  #    history.size = 100000;
+#
+#      shellAliases = {
+#        ll = "ls -l";
+#        update = "sudo nixos-rebuild switch";
+#
+#        editnix = "sudo vim +/new_pkg /etc/nixos/configuration.nix && update";
+#        editzsh = "editnix && source ~/.zshrc";	
+#      };
+#
+#      oh-my-zsh = {
+#        enable = true;
+#        plugins = [ "git" ];
+#        theme = "kphoen";
+#      };
+#    };
 
-      shellAliases = {
-        ll = "ls -l";
-        update = "sudo nixos-rebuild switch";
-
-        editnix = "sudo vim +/new_pkg /etc/nixos/configuration.nix && update";
-        editzsh = "editnix && source ~/.zshrc";	
-      };
-
-      oh-my-zsh = {
-        enable = true;
-        plugins = [ "git" ];
-        theme = "kphoen";
-      };
-    };
-
-    programs.neovim = {
-      enable = true;
-      defaultEditor = true;
-      viAlias = true;
-      vimAlias = true;
-      extraConfig = ''
-        set number relativenumber
-        '';
-    };
-
-    home.stateVersion = "23.11";
-  };
+#    programs.neovim = {
+#      enable = true;
+#      defaultEditor = true;
+#      viAlias = true;
+#      vimAlias = true;
+#      extraConfig = ''
+#        set number relativenumber
+#        '';
+#    };
+#
+#    home.stateVersion = "23.11";
+#  };
 
 # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -294,7 +294,7 @@
     "openssl-1.1.1w"
       "electron-25.9.0"
   ];
-
+#
 # List packages installed in system profile. To search, run:
 # $ nix search wget
   environment.systemPackages = with pkgs; [
