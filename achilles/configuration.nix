@@ -465,11 +465,11 @@
 # networking.firewall.allowedTCPPorts = [ ... ];
 # networking.firewall.allowedUDPPorts = [ ... ];
 # Or disable the firewall altogether.
-# networking.firewall.enable = false;
+#  networking.firewall.enable = false;
   services.tailscale.enable = true;
 
   networking.firewall = {
-    enable = true;
+    enable = false;
     allowedTCPPorts = [ 3000 1701 9001 4000 8000 25567 64831 ];
     allowedTCPPortRanges = [
     { from = 1714; to = 1764; }
