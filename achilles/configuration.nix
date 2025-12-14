@@ -9,8 +9,8 @@
     ./hardware-configuration.nix
 # Home manager
       (import "${(builtins.fetchTarball {
-  url = "https://github.com/nix-community/home-manager/archive/master.tar.gz";
-  sha256 = "0knyq88fpv9713ka6fpm6dyypbhp3sksy3m1wj1hhir2g51giqr8";
+  url = "https://github.com/nix-community/home-manager/archive/release-25.11.tar.gz";
+  sha256 = "02ly03p934ywps0rkwj251fszr6x00d9g7ikn9g7qx27xnrv3ka4";
   })}/nixos")
     ];
   system.stateVersion = lib.mkForce "23.11"; # Did you read the comment?
