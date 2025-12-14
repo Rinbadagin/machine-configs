@@ -32,7 +32,11 @@
     pkgs.gitMinimal
     pkgs.neofetch
     pkgs.nfs-utils
+    pkgs.ncdu
+    pkgs.powertop
   ];
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   users.users.root.openssh.authorizedKeys.keys =
     [

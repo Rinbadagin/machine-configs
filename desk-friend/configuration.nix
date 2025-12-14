@@ -75,31 +75,59 @@
         {
           "desk-friend utils" = [
             {
-              "*arrs" = {
-                description = "starr programs for nomnomnom";
-                widgets = [
-                {
+              "sonarr" = {
+                description = "sonarr starr";
+                href = "http://desk-friend:8989";
+                widget = {
                   type = "sonarr";
                   url = "http://desk-friend:8989";
                   key = "cc583390c7e14e59ab9dcda8c77a5e45";
-                }
-                {
+                };
+              };
+            }
+            {
+              "lidarr" = {
+                description = "lidarr starr";
+                href = "http://desk-friend:8686";
+                widget = {
                   type = "lidarr";
                   url = "http://desk-friend:8686";
                   key = "04a705296c6a4d9ba2dc186c9774085d";
-                }
-                {
+                };
+              };
+            }
+            {
+              "radarr" = {
+                description = "radarr starr";
+                href = "http://desk-friend:7878";
+                widget = {
                   type = "radarr";
                   url = "http://desk-friend:7878";
                   key = "cb31b22e0fd64bd7b0cbf2fffa712136";
-                }
-                {
+                };
+              };
+            }
+            {
+              "readarr" = {
+                description = "readarr starr";
+                href = "http://desk-friend:8787";
+                widget = {
                   type = "readarr";
                   url = "http://desk-friend:8787";
                   key = "cb4fb2bae86b49779dc133f2444e9398";
-                }
-                ];
+                };
               };
+            }
+            {
+              "flood" = {
+                description = "flood! aah!";
+                href = "http://desk-friend:3000";
+                widget = {
+                  type = "flood";
+                  url = "http://desk-friend:3000";
+                };
+              };
+              
             }
           ];
         }

@@ -29,6 +29,21 @@
       ];
     };
 
+    nixosConfigurations.achilles = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+        #disko.nixosModules.disko
+        ./achilles/configuration.nix
+        ./achilles/hardware-configuration.nix
+        ./base/configuration.nix
+        agenix.nixosModules.default
+
+        {
+          environment.systemPackages = [ agenix.packages."x86_64-linux".default ];
+        }
+      ];
+    };
+
     nixosConfigurations.dusty-cobweb = nixpkgs.lib.nixosSystem {
       system = "aarch64-linux";
       modules = [
