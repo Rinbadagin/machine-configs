@@ -352,6 +352,7 @@
 
        ];
        })
+       xorg.xrandr
   oci-cli
 # ruby_3_3
     yarn
