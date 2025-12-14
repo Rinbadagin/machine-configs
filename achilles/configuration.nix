@@ -449,6 +449,9 @@
     autoStart = true;
     capSysAdmin = true;
     openFirewall = true;
+    settings = {
+      origin_web_ui_allowed = "wan";
+    };
   };
 
   services.joycond.enable = true;
