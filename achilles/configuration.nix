@@ -179,7 +179,7 @@
         deviceSection = ''
             VendorName "NVIDIA Corporation"
             Option      "AllowEmptyInitialConfiguration"
-            Option      "ConnectedMonitor" "DFP"
+            Option      "ConnectedMonitor" "DVI-D-0"
             Option      "CustomEDID" "DFP-0"
 
         '';
