@@ -237,6 +237,13 @@
   programs.zsh.enable = true;
 
 #uinput group for /dev/uinput access
+
+  boot.kernelModules = [ "uinput" ];
+
+  services.udev.extraRules = ''
+      KERNEL=="uinput", GROUP="uinput", MODE="0660", OPTIONS+="static_node=uinput"
+    '';
+
   users.groups.uinput = {};
 # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.klara = {
@@ -248,6 +255,10 @@
       # chromium
 #  thunderbird$
     ];
+  };
+
+  users.users.root = {
+    extraGroups = [ "uinput" ];
   };
 
   #home-manager.users.klara = {
