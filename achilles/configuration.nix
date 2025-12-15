@@ -238,7 +238,7 @@
 
 #uinput group for /dev/uinput access
 
-  boot.kernelModules = [ "uinput" ];
+  boot.kernelModules = [ "uinput" "efivarfs" ];
 
   services.udev.extraRules = ''
       KERNEL=="uinput", GROUP="uinput", MODE="0660", OPTIONS+="static_node=uinput"
@@ -364,6 +364,7 @@
        ];
        })
        xorg.xrandr
+       efibootmgr
   oci-cli
 # ruby_3_3
     yarn
