@@ -59,9 +59,9 @@
     #   device = "/dev/nvme1n1p1";
     #};
     grub = {
-        enable = false;
+        enable = true;
     };
-    limine.enable = true;
+    # limine.enable = true;
   };
 
   networking.hostName = "achilles"; # Define your hostname.
