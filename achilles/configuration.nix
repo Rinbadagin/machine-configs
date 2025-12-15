@@ -58,6 +58,9 @@
     #   efiInstallAsRemovable = lib.mkForce false; # in case canTouchEfiVariables doesn't work for your system
     #   device = "/dev/nvme1n1p1";
     #};
+    grub = {
+        enable = false;
+    };
     limine.enable = true;
   };
 
