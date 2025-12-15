@@ -451,8 +451,10 @@
     capSysAdmin = true;
     openFirewall = true;
     settings = {
-      origin_web_ui_allowed = "lan";
-      origin_pin_allowed = "lan";
+      origin_web_ui_allowed = "wan";
+      origin_pin_allowed = "wan";
+      wan_encryption_mode = 0;
+      lan_encryption_mode = 0;
     };
   };
 
