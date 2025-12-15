@@ -19,6 +19,11 @@
       fsType = "ext4";
     };
 
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-id/NVME-KINGSTON_SNV3S500G_50026B787140624-part3";
+    fsType = "vfat";
+  };
+
   fileSystems."/home" =
     { device = "/dev/disk/by-uuid/2aa8a487-cc03-4c60-ac7a-3442ad0ca917";
       fsType = "ext4";
