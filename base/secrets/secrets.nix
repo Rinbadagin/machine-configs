@@ -8,6 +8,8 @@ let
 
     # dusty-cobweb pubkey
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMgEflZNpuj93w/qqm/l9sNObr9q5PnYpm/ya+ME7vxq root@dusty-cobweb"
+    # achilles pubkey
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDrCqJNpJmHur5MgxnskLF02dJUz3D2FCLzJ78WGkaOK root@achilles"
   ];
 in
 {
