@@ -166,7 +166,7 @@
 # Load nvidia driver for Xorg and Wayland
   # services.xserver.videoDrivers = ["nvidia"];
 
-  nix.settings.sandbox = true;
+  nix.settings.sandbox = false;
 
   services.xserver = {
         enable = true;
