@@ -175,7 +175,7 @@
 #        displayManager.startx.enable = true;
     displayManager.gdm.enable = true;
     desktopManager.plasma6.enable = true;
-    displayManager.defaultSession = "plasma";
+    displayManager.defaultSession = "plasmax11";
 
     displayManager.autoLogin.enable = true;
     displayManager.autoLogin.user = "klara";
