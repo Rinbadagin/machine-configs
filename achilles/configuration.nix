@@ -47,16 +47,10 @@
   #boot.loader.grub.device = "/dev/disk/by-id/nvme-KINGSTON_SNV3S500G_50026B7687140624-part3";
   #boot.loader.grub.useOSProber = true;
   # boot.loader.systemd-boot.enable = true;
-  boot.loader = {
     #efi = {
     #  canTouchEfiVariables = true;
       # efiSysMountPoint = "/boot/efi"; # ← use the same mount point here.
     #};
-    grub = {
-       enable = true;
-       useOSProber = true;
-       device = "/dev/disk/by-id/nvme-KINGSTON_SNV3S500G_50026B7687140624";
-    };
     #   efiInstallAsRemovable = lib.mkForce false; # in case canTouchEfiVariables doesn't work for your system
     #   device = "/dev/nvme1n1p1";
     };
@@ -65,7 +59,11 @@
     #    devices = [ "" "/dev/disk/by-id/nvme-TEAM_TM8FPK001T_112401230120828" "/dev/disk/by-id/wwn-0x50000395f42872dc" ];
     #};
     # limine.enable = true;
-  };
+  boot.loader.grub = {
+       enable = true;
+       useOSProber = true;
+       device = "/dev/disk/by-id/nvme-KINGSTON_SNV3S500G_50026B7687140624";
+    };
 
   networking.hostName = "achilles"; # Define your hostname.
 # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
