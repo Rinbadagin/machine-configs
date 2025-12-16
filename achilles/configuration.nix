@@ -48,15 +48,16 @@
   #boot.loader.grub.useOSProber = true;
   # boot.loader.systemd-boot.enable = true;
   boot.loader = {
-    efi = {
-      canTouchEfiVariables = true;
+    #efi = {
+    #  canTouchEfiVariables = true;
       # efiSysMountPoint = "/boot/efi"; # ← use the same mount point here.
-    };
+    #};
     grub = {
        enable = true;
        useOSProber = true;
        device = "/dev/disk/by-id/nvme-KINGSTON_SNV3S500G_50026B7687140624";
-    };#   efiInstallAsRemovable = lib.mkForce false; # in case canTouchEfiVariables doesn't work for your system
+    };
+    #   efiInstallAsRemovable = lib.mkForce false; # in case canTouchEfiVariables doesn't work for your system
     #   device = "/dev/nvme1n1p1";
     };
     #grub = {
