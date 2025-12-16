@@ -486,13 +486,6 @@
   #  };
   #};
 
-  sunshineConfigFile = pkgs.writeTextDir "config/sunshine.conf"
-        ''
-        origin_web_ui_allowed=wan
-        origin_pin_allowed = "wan"
-        wan_encryption_mode = 0
-        lan_encryption_mode = 0
-        '';
 
   security.wrappers.sunshine = {
         owner = "root";
@@ -512,7 +505,14 @@
         after = [ "graphical-session.target" ];
         unitConfig.ConditionUser = "klara";
 
-        serviceConfig = {
+        serviceConfig = let
+          sunshineConfigFile = pkgs.writeTextDir "config/sunshine.conf"
+          ''
+          origin_web_ui_allowed=wan
+          origin_pin_allowed = "wan"
+          wan_encryption_mode = 0
+          lan_encryption_mode = 0
+          ''; in {
             ExecStart = "${config.security.wrapperDir}/sunshine ${sunshineConfigFile}/config/sunshine.conf";
             Restart = "on-failure";
             RestartSec = "5s";
