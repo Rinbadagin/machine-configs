@@ -266,7 +266,8 @@
     shell = pkgs.zsh;
     isNormalUser = true;
     description = "Klara =]";
-    extraGroups = [ "networkmanager" "wheel" "docker" "uinput" "cdrom" "dialout"];
+    home = "/home/klara";
+    extraGroups = [ "networkmanager" "wheel" "docker" "uinput" "cdrom" "dialout" "video" ];
     packages = with pkgs; [
       # chromium
 #  thunderbird$
