@@ -486,6 +486,33 @@
     };
   };
 
+  security.wrappers.sunshine = {
+        owner = "root";
+        group = "root";
+        capabilities = "cap_sys_admin+p";
+        source = "${pkgs.sunshine}/bin/sunshine";
+    };
+
+    # Inspired from https://github.com/LizardByte/Sunshine/blob/5bca024899eff8f50e04c1723aeca25fc5e542ca/packaging/linux/sunshine.service.in
+    systemd.user.services.sunshine = {
+        description = "Sunshine server";
+        wantedBy = [ "graphical-session.target" ];
+        startLimitIntervalSec = 500;
+        startLimitBurst = 5;
+        partOf = [ "graphical-session.target" ];
+        wants = [ "graphical-session.target" ];
+        after = [ "graphical-session.target" ];
+        unitConfig.ConditionUser = "klara";
+
+        serviceConfig = {
+            ExecStart = "${config.security.wrapperDir}/sunshine";
+            Restart = "on-failure";
+            RestartSec = "5s";
+        };
+    };
+    
+    services.avahi.publish.userServices = true;
+
   services.joycond.enable = true;
   programs.joycond-cemuhook.enable = true;
 
