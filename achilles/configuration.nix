@@ -30,6 +30,7 @@
       address = "192.0.2.3";
       prefixLength = 24;
     }];
+    };
   };
 
 #	fileSystems."/nix" =
