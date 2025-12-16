@@ -174,7 +174,7 @@
         
 #        displayManager.startx.enable = true;
     displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
+    desktopManager.plasma.enable = true;
     displayManager.defaultSession = "gnome";
 
     displayManager.autoLogin.enable = true;
