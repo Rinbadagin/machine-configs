@@ -20,7 +20,7 @@
     };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-id/NVME-KINGSTON_SNV3S500G_50026B787140624-part3";
+    device = "/dev/disk/by-uuid/79F7-6E0A";
     fsType = "vfat";
   };
 

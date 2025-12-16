@@ -64,7 +64,7 @@
     grub = {
        enable = true;
        useOSProber = true;
-       device = "/dev/disk/by-id/nvme-KINGSTON_SNV3S500G_50026B7687140624";
+       device = "/dev/disk/by-id/nvme-KINGSTONE_SNV3S500G_50026B7687140624";
     };
   };
 
