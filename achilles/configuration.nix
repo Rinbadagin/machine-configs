@@ -20,6 +20,18 @@
     fsType = "ext4";
   };
 
+  networking = {
+  interfaces.enp5s0 = {
+    ipv6.addresses = [{
+      address = "2a01:4f8:1c1b:16d0::2";
+      prefixLength = 64;
+    }];
+    ipv4.addresses = [{
+      address = "192.0.2.3";
+      prefixLength = 24;
+    }];
+  };
+
 #	fileSystems."/nix" =
 #	{ 
 #		depends = ["/" "/speedy" ];
