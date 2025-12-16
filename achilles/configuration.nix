@@ -161,8 +161,6 @@
 
   hardware.opengl = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
   };
 
 # Load nvidia driver for Xorg and Wayland
@@ -324,7 +322,14 @@
     "openssl-1.1.1w"
       "electron-25.9.0"
   ];
+  nixpkgs.config.cudaSupport = true;
 #
+
+  nix.settings = {
+    substituters = [ "https://cache.nixos-cuda.org" ];
+    trusted-public-keys = [ "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M=" ];
+  };
+
 # List packages installed in system profile. To search, run:
 # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -384,6 +389,7 @@
        })
        xorg.xrandr
        efibootmgr
+       cudatoolkit
   oci-cli
 # ruby_3_3
     yarn
