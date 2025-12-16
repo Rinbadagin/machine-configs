@@ -57,10 +57,10 @@
     # limine.enable = true;
   boot.loader = {
     
-    efi = {
-      canTouchEfiVariables = true;
+    #efi = {
+    #  canTouchEfiVariables = true;
     # efiSysMountPoint = "/boot/efi"; # ← use the same mount point here.
-    };
+    #};
     grub = {
        enable = true;
        useOSProber = true;
