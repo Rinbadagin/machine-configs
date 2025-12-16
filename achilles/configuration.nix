@@ -473,18 +473,26 @@
 #		openFirewall = false;
 #	};
 
-  services.sunshine = {
-    enable = true;
-    # autoStart = true;
-    capSysAdmin = true;
-    openFirewall = true;
-    settings = {
-      origin_web_ui_allowed = "wan";
-      origin_pin_allowed = "wan";
-      wan_encryption_mode = 0;
-      lan_encryption_mode = 0;
-    };
-  };
+  #services.sunshine = {
+  ##  enable = true;
+  #  # autoStart = true;
+  #  capSysAdmin = true;
+  #  openFirewall = true;
+  #  settings = {
+  #    origin_web_ui_allowed = "wan";
+  #    origin_pin_allowed = "wan";
+  #    wan_encryption_mode = 0;
+  #    lan_encryption_mode = 0;
+  #  };
+  #};
+
+  sunshineConfigFile = pkgs.writeTextDir "config/sunshine.conf"
+        ''
+        origin_web_ui_allowed=wan
+        origin_pin_allowed = "wan"
+        wan_encryption_mode = 0
+        lan_encryption_mode = 0
+        '';
 
   security.wrappers.sunshine = {
         owner = "root";
@@ -505,7 +513,7 @@
         unitConfig.ConditionUser = "klara";
 
         serviceConfig = {
-            ExecStart = "${config.security.wrapperDir}/sunshine";
+            ExecStart = "${config.security.wrapperDir}/sunshine ${sunshineConfigFile}/config/sunshine.conf";
             Restart = "on-failure";
             RestartSec = "5s";
         };
