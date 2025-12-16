@@ -175,10 +175,10 @@
 #        displayManager.startx.enable = true;
     displayManager.gdm.enable = true;
     desktopManager.plasma6.enable = true;
-    displayManager.defaultSession = "gnome";
+    displayManager.defaultSession = "plasma";
 
     displayManager.autoLogin.enable = true;
-    displayManager.autoLogin.user = "sunshine";
+    displayManager.autoLogin.user = "klara";
 
 
         # Dummy screen
