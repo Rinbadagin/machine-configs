@@ -355,7 +355,7 @@
       winetricks
       protontricks
       zsh
-      firefox
+      # firefox
       vim
       vlc
       prismlauncher
