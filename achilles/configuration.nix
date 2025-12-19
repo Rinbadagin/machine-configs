@@ -90,7 +90,7 @@
                 widget = {
                   type = "sonarr";
                   url = "http://achilles:8989";
-                  key = "cc583390c7e14e59ab9dcda8c77a5e45";
+                  key = "bf18fbf0f6e4474fb668ac8c4d50303d";
                 };
               };
             }
@@ -101,7 +101,7 @@
                 widget = {
                   type = "lidarr";
                   url = "http://achilles:8686";
-                  key = "04a705296c6a4d9ba2dc186c9774085d";
+                  key = "f33a7d37fd4c48b497e02e4f9ac36b3c";
                 };
               };
             }
@@ -112,7 +112,7 @@
                 widget = {
                   type = "radarr";
                   url = "http://achilles:7878";
-                  key = "cb31b22e0fd64bd7b0cbf2fffa712136";
+                  key = "ca501f07ba4e4af39283f2a1194b86c1";
                 };
               };
             }
@@ -123,7 +123,7 @@
                 widget = {
                   type = "readarr";
                   url = "http://achilles:8787";
-                  key = "cb4fb2bae86b49779dc133f2444e9398";
+                  key = "1b7e812575f74ed0b009a9145f9fbe67";
                 };
               };
             }
