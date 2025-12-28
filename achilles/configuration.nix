@@ -573,6 +573,7 @@
     # kicad
     arduino
     arduino-ide
+    firefox
 # latest_package new_pkg latest_pkg new_package new_program latest_program
     ];
 
