@@ -228,8 +228,10 @@
 
 # Configure keymap in X11
   services.xserver = {
-    layout = "nz";
-    xkbVariant = "";
+    xkb = {
+      layout = "nz";
+      variant = "";
+    };
   };
 
 # input-remapper for controller emulation from keyboard
@@ -252,7 +254,7 @@
 
 # Enable sound with pipewire.
 #	sound.enable = true;
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
 
 # this is for k3b- dont mind it
@@ -282,7 +284,7 @@
     jack.enable = true;
   };
 
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
   };
 
@@ -294,19 +296,19 @@
     substituters = [ "https://cache.nixos-cuda.org" ];
     trusted-public-keys = [ "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M=" ];
   };
+  services.desktopManager.plasma6.enable = true;
+  
+  services.displayManager = {
+    defaultSession = "plasmax11";
+    autoLogin.enable = true;
+    autoLogin.user = "klara";
+  };
+
   services.xserver = {
         enable = true;
         videoDrivers = ["nvidia"];
         
 #        displayManager.startx.enable = true;
-    displayManager.gdm.enable = true;
-    desktopManager.plasma6.enable = true;
-    displayManager.defaultSession = "plasmax11";
-
-    displayManager.autoLogin.enable = true;
-    displayManager.autoLogin.user = "klara";
-
-
         # Dummy screen
         monitorSection = ''
             VendorName     "Unknown"
