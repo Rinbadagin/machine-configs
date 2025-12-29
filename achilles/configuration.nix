@@ -450,7 +450,7 @@
     "openssl-1.1.1w"
       "electron-25.9.0"
   ];
-  nixpkgs.config.cudaSupport = true;
+  nixpkgs.config.cudaSupport = false;
 #
 
   #nix.settings = {
@@ -629,7 +629,7 @@
         owner = "root";
         group = "root";
         capabilities = "cap_sys_admin+p";
-        source = "${pkgs.sunshine}/bin/sunshine";
+        source = "${ pkgs.sunshine.override({ config.cudaSupport = true; }) }/bin/sunshine";
     };
 
     # Inspired from https://github.com/LizardByte/Sunshine/blob/5bca024899eff8f50e04c1723aeca25fc5e542ca/packaging/linux/sunshine.service.in
