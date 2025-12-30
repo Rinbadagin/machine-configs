@@ -65,8 +65,6 @@
   
   services.jellyfin = {
     enable = true;
-    user = "klara";
-    group = "klara";
     openFirewall = true;
   };
 
