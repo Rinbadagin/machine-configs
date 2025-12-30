@@ -62,6 +62,13 @@
     openFirewall = true;
     host = "0.0.0.0";
   };
+  
+  services.jellyfin = {
+    enable = true;
+    user = "klara";
+    group = "klara";
+    openFirewall = true;
+  };
 
   services.homepage-dashboard = {
     enable = true;
