@@ -162,5 +162,9 @@
     extraGroups = [ "qbittorrent" ];
   };
 
+  users.users.jellyfin = {
+    extraGroups = [ "qbittorrent" ];
+  };
+
   system.stateVersion = "25.05";
 }

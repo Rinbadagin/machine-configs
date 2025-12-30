@@ -69,8 +69,6 @@
 
   services.jellyfin = {
     enable = true;
-    user = "klara";
-    group = "klara";
     openFirewall = true;
   };
 
@@ -411,6 +409,26 @@
 
   users.users.root = {
     extraGroups = [ "uinput" ];
+  };
+
+  users.users.lidarr = {
+    extraGroups = [ "qbittorrent" ];
+  };
+
+  users.users.sonarr = {
+    extraGroups = [ "qbittorrent" ];
+  };
+
+  users.users.radarr = {
+    extraGroups = [ "qbittorrent" ];
+  };
+
+  users.users.readarr = {
+    extraGroups = [ "qbittorrent" ];
+  };
+
+  users.users.jellyfin = {
+    extraGroups = [ "qbittorrent" ];
   };
 
   #home-manager.users.klara = {
