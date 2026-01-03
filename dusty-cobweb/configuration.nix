@@ -26,6 +26,18 @@
   #  tokenFile = config.age.secrets."k3s-server-token.age".path;
   #};
 
+  services.caddy = {
+    enable = true;
+    virtualHosts = {
+      "demo.klara.nz" = {
+        extraConfig = ''
+          encode gzip
+          root * /srv/http
+        '';
+      };
+    };
+  };
+
 
   system.stateVersion = "25.05";
 }
