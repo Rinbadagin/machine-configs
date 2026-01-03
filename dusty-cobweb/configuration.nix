@@ -15,16 +15,16 @@
 
     firewall = {
       # from https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/networking/cluster/k3s/docs/USAGE.md
-      # for k3s inbound
-      allowedTCPPorts = [ 6443 ];
+      # for k3s inbound, 6443
+      allowedTCPPorts = [ ];
     };
   };
 
-  services.k3s = {
-    enable = true;
-    role = "server";
-    tokenFile = config.age.secrets."k3s-server-token.age".path;
-  };
+  #services.k3s = {
+  #  enable = true;
+  #  role = "server";
+  #  tokenFile = config.age.secrets."k3s-server-token.age".path;
+  #};
 
 
   system.stateVersion = "25.05";
