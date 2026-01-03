@@ -601,6 +601,7 @@
     arduino
     arduino-ide
     firefox
+    bolt-launcher
 # latest_package new_pkg latest_pkg new_package new_program latest_program
     ];
 
