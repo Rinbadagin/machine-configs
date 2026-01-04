@@ -33,6 +33,7 @@
         extraConfig = ''
           encode gzip
           root * /srv/http
+          file_server
         '';
       };
     };
