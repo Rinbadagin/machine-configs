@@ -31,9 +31,20 @@
     virtualHosts = {
       "demo.klara.nz" = {
         extraConfig = ''
+          @kaiosonly {
+            header_regexp User-Agent KAIOS
+            path_regexp \.js$
+          }
+
           encode gzip
-          root * /srv/http
-          file_server
+          
+          file_server @kaiosonly {
+            root /srv/http/kaios-only
+          }
+
+          file_server {
+            root /srv/http/public
+          }
         '';
       };
     };
