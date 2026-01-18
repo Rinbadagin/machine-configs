@@ -168,10 +168,9 @@
     environment ={
       ANONYMIZED_TELEMETRY = "False";
       DO_NOT_TRACK = "True";
-      SCARF_NO_ANALYTICS = "True";
-      
-      DEFAULT_USER_ROLE = "admin";
+      SCARF_NO_ANALYTICS = "True"; 
     };
+      # DEFAULT_USER_ROLE = "admin";
   };
 
 #	fileSystems."/nix" =
