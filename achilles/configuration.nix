@@ -163,6 +163,7 @@
   services.open-webui = {
     enable = true;
     openFirewall = true;
+    port = 11111;
   };
 
 #	fileSystems."/nix" =
