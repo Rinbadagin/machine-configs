@@ -154,6 +154,17 @@
     guiAddress = "0.0.0.0:8384";
   };
 
+  services.ollama = {
+    enable = true;
+    host = "0.0.0.0";
+    openFirewall = true;
+  };
+
+  services.open-webui = {
+    enable = true;
+    openFirewall = true;
+  };
+
 #	fileSystems."/nix" =
 #	{ 
 #		depends = ["/" "/speedy" ];
