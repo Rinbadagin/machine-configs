@@ -164,6 +164,7 @@
     enable = true;
     openFirewall = true;
     port = 11111;
+    host = "0.0.0.0";
   };
 
 #	fileSystems."/nix" =
