@@ -152,6 +152,10 @@
     enable = true;
     openDefaultPorts = true;
     guiAddress = "0.0.0.0:8384";
+    group = "users";
+    user = "klara";
+    dataDir = "/home/klara/synced";
+    configDir = "/home/klara/.config/syncthing";
   };
 
   services.ollama = {
