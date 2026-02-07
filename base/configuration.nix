@@ -64,14 +64,13 @@
       enable = true;
       networks = {
         disconet = {
-#ssid="disconet";
+	  # ssid = "disconet";
           pskRaw = "1bfc343772e8153034c0d253b288835881c347eba1492627490abeb425f02c7d";
         };
-        Homelander = {
-# generated with wpa_passphrase <ssid> <psk>
-# ssid="Homelander"
-          pskRaw = "2d4cd2ce56c462533ce0cd8a1b44502db2c94212ce106795724efbeea9a6c002";
-        };
+	"lesbians lounge" = {
+	  # ssid = "lesbians lounge"
+          pskRaw = "e058b96640d62dda6a3dbce578f0b0ad56a9696f1586c11bb3d5e5b6a1152fe7";
+	};
       };
     };
   };
