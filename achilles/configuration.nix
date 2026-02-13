@@ -630,7 +630,7 @@
     arduino
     arduino-ide
     firefox
-    bolt-launcher
+    ({bolt-launcher.override = { enableRS3 = true; })
 # latest_package new_pkg latest_pkg new_package new_program latest_program
     ];
 
