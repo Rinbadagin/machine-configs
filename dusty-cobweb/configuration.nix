@@ -8,6 +8,7 @@
 {
   imports = [
     ./disk-config.nix
+    ./avocado.nix
   ];
 
   networking = {
