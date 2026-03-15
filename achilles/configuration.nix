@@ -162,6 +162,7 @@
     enable = true;
     host = "0.0.0.0";
     openFirewall = true;
+    package = pkgs.ollama-cuda;
   };
 
   services.open-webui = {
