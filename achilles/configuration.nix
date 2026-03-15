@@ -10,7 +10,7 @@
 # Home manager
       (import "${(builtins.fetchTarball {
   url = "https://github.com/nix-community/home-manager/archive/release-25.11.tar.gz";
-  sha256 = "0h5mdxblkvipnsj5b68gshl92d9b0b03nlib3mrgipl1mh05xxjn";
+  sha256 = "1x2zy5iishsf2jppn42l2kwkyavc7pdwxd4gcrmn1ff3nv9kkbdc";
   })}/nixos")
     ];
   system.stateVersion = lib.mkForce "23.11"; # Did you read the comment?
@@ -526,7 +526,7 @@
       vlc
       prismlauncher
       kitty
-      neofetch
+      fastfetch
       bitwarden-desktop
       gimp
       lmms
@@ -560,7 +560,6 @@
       vscodium
       ghostscript
       # ghidra
-      runescape
       # transmission-gtk
       lutris
       # spotify

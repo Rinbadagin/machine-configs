@@ -30,7 +30,7 @@
   environment.systemPackages = map lib.lowPrio [
     pkgs.curl
     pkgs.gitMinimal
-    pkgs.neofetch
+    pkgs.fastfetch
     pkgs.nfs-utils
     pkgs.ncdu
     pkgs.powertop
