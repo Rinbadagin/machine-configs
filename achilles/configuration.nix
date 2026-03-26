@@ -186,6 +186,14 @@
       # DEFAULT_USER_ROLE = "admin";
   };
 
+  services.immich = {
+    enable = true;
+    user = "klara";
+    mediaLocation = "/home/klara/immich";
+    openFirewall = true;
+    host = "0.0.0.0";
+  }
+
 #	fileSystems."/nix" =
 #	{ 
 #		depends = ["/" "/speedy" ];
