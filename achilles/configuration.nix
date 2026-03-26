@@ -194,9 +194,9 @@
     openFirewall = true;
     host = "0.0.0.0";
 
-    database = {
-      user = "immich";
-    };
+    # database = {
+    #   user = "klara";
+    # };
   };
 
 #	fileSystems."/nix" =
