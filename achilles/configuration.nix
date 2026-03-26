@@ -189,7 +189,7 @@
   services.immich = {
     enable = true;
     user = "klara";
-    # group = "klara";
+    group = "users";
     mediaLocation = "/home/klara/immich";
     openFirewall = true;
     host = "0.0.0.0";
