@@ -189,9 +189,14 @@
   services.immich = {
     enable = true;
     user = "klara";
+    group = "klara";
     mediaLocation = "/home/klara/immich";
     openFirewall = true;
     host = "0.0.0.0";
+
+    database = {
+      user = "immich";
+    };
   };
 
 #	fileSystems."/nix" =
