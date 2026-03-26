@@ -190,7 +190,7 @@
     enable = true;
     # user = "klara";
     # group = "users";
-    mediaLocation = "/home/klara/immich";
+    # mediaLocation = "/home/klara/immich";
     openFirewall = true;
     host = "0.0.0.0";
 
