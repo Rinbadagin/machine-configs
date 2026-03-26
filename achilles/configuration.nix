@@ -192,7 +192,7 @@
     mediaLocation = "/home/klara/immich";
     openFirewall = true;
     host = "0.0.0.0";
-  }
+  };
 
 #	fileSystems."/nix" =
 #	{ 
