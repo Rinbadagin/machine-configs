@@ -451,7 +451,7 @@
     isNormalUser = true;
     description = "Klara =]";
     home = "/home/klara";
-    extraGroups = [ "networkmanager" "wheel" "docker" "uinput" "cdrom" "dialout" "video" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "uinput" "cdrom" "dialout" "video" "immich" ];
     packages = with pkgs; [
       # chromium
 #  thunderbird$
