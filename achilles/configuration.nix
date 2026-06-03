@@ -10,7 +10,7 @@
 # Home manager
       (import "${(builtins.fetchTarball {
   url = "https://github.com/nix-community/home-manager/archive/release-25.11.tar.gz";
-  sha256 = "1x2zy5iishsf2jppn42l2kwkyavc7pdwxd4gcrmn1ff3nv9kkbdc";
+  sha256 = "13fmry1jd0na71fxhzms9qf3ybj6shgvnphq4p1akxxmv44gzq20";
   })}/nixos")
     ];
   system.stateVersion = lib.mkForce "23.11"; # Did you read the comment?
