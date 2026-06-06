@@ -423,7 +423,7 @@
     nvidiaSettings = true;
 
 # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.legacy_470;
+    package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
   };
 
 # use the example session manager (no others are packaged yet so this is enabled by default,
