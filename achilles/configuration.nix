@@ -351,6 +351,7 @@
   nix.settings = {
     substituters = [ "https://cache.nixos-cuda.org" ];
     trusted-public-keys = [ "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M=" ];
+    nix.settings.substituters = [ "https://aseipp-nix-cache.global.ssl.fastly.net" ];
   };
   services.desktopManager.plasma6.enable = true;
   
@@ -423,7 +424,7 @@
     nvidiaSettings = true;
 
 # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
+    package = config.boot.kernelPackages.nvidiaPackages.legacy_470;
   };
 
 # use the example session manager (no others are packaged yet so this is enabled by default,
