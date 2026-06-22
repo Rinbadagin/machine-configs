@@ -162,6 +162,9 @@
       #vim
       #strawberry-qt
 # new_pkg
-      (callPackage "${builtins.fetchTarball "https://github.com/ryantm/agenix/archive/main.tar.gz"}/pkgs/agenix.nix" {})
+      (callPackage "${(builtins.fetchTarball {
+        url = "https://github.com/ryantm/agenix/archive/main.tar.gz";
+        sha256 = "sha256-Ks+p8geHkzSc2z51GOiugLDqxy8lgNhF/2o3Pc/a9VU=";
+        })}/pkgs/agenix.nix")
       ];
 }

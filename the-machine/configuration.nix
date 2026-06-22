@@ -14,7 +14,10 @@
       ./home-configuration.nix
       ./modules/smb-client.nix
       ./boot/plymouth.nix
-     "${builtins.fetchTarball "https://github.com/ryantm/agenix/archive/main.tar.gz"}/modules/age.nix"
+     "${(builtins.fetchTarball { 
+        url = "https://github.com/ryantm/agenix/archive/main.tar.gz";
+        sha256 = "sha256-Ks+p8geHkzSc2z51GOiugLDqxy8lgNhF/2o3Pc/a9VU=";
+      })}/modules/age.nix" 
     ];
 
 # Bootloader.
