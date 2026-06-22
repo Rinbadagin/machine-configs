@@ -14,6 +14,21 @@
     ...
   }:
   {
+    nixosConfigurations.the-machine = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+        # disko.nixosModules.disko
+        ./the-machine/configuration.nix
+        ./the-machine/hardware-configuration.nix
+        ./base/configuration.nix
+        agenix.nixosModules.default
+
+        {
+          environment.systemPackages = [ agenix.packages."x86_64-linux".default ];
+        }
+      ];
+    };
+
     nixosConfigurations.desk-friend = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [

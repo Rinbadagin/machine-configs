@@ -1,0 +1,60 @@
+include /etc/nixos/sway/base-config
+input "type:touchpad" {
+  dwt disabled
+    dwtp disabled
+    tap enabled
+    tap_button_map lrm
+}
+
+# output eDP-1 {
+#  background /etc/nixos/backgrounds/castle.png fill
+# }
+
+# output DP-1 {
+#   background /etc/nixos/backgrounds/frame.png fill
+# }
+
+# output HDMI-A-1 {
+#   background /etc/nixos/backgrounds/lighthouse.png fill
+# }
+
+set $wallpapers_path /etc/nixos/backgrounds/
+output eDP-1 bg `find $wallpapers_path -type f | shuf -n 1` fill
+output DP-1 bg `find $wallpapers_path -type f | shuf -n 1` fill
+output HDMI-A-1 bg `find $wallpapers_path -type f | shuf -n 1` fill
+
+set $opacity 0.9
+gaps inner 5
+shadows enable
+blur enable
+corner_radius 8
+
+client.unfocused #000000 #302020bb #ffffff
+client.focused #000000 #351a4ee5 #ffffff
+
+bar {
+    position top
+
+    # When the status_command prints a new line to stdout, swaybar updates.
+    # The default just shows the current date and time.
+    status_command while /etc/nixos/scripts/status-bar.bash; do sleep 1; done
+
+    colors {
+        statusline #ffffff
+        background #1d0a3691
+        inactive_workspace #213008a9 #302020cc #1e3f11aa
+    }
+}
+
+
+exec swayosd-server
+
+# Volume raise with max value
+bindsym XF86AudioRaiseVolume exec swayosd-client --output-volume raise --max-volume 120
+# Volume lower with max value
+bindsym XF86AudioLowerVolume exec swayosd-client --output-volume lower --max-volume 120
+
+# Brightness raise with custom value('+' sign needed)
+bindsym XF86MonBrightnessUp  exec swayosd-client --brightness +10
+# Brightness lower with custom value('-' sign needed)
+bindsym XF86MonBrightnessDown exec swayosd-client --brightness -10
