@@ -34,9 +34,17 @@
     pkgs.nfs-utils
     pkgs.ncdu
     pkgs.powertop
+    pkgs.vim
+    pkgs.tmux
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.optimise.automatic = true;
+  nix.optimise.dates = [ "03:45" ];
+
+  nix.gc.automatic = true;
+  nix.gc.dates = "daily";
+  nix.gc.options = "--delete-older-than +5"; 
 
   users.users.root.openssh.authorizedKeys.keys =
     [
