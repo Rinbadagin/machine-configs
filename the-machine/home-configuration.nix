@@ -6,6 +6,7 @@
   sha256 = "13fmry1jd0na71fxhzms9qf3ybj6shgvnphq4p1akxxmv44gzq20";
   })}/nixos")
       ./modules/oneko_start.nix
+      # inputs.nixvim.homeModules.nixvim
   ];
   home-manager.useGlobalPkgs = true;
   home-manager.users.klara = {

@@ -1,8 +1,19 @@
-{ config, pkgs, nixpkgs, ... }:
+{ config, pkgs, nixpkgs, lib, ... }:
 {
   nixpkgs.config.permittedInsecurePackages = [
     "openssl-1.1.1w"
   ];
+
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    "steam"
+    "steam-unwrapped"
+    "RuneScape"
+    "runescape-launcher"
+    "zoom"
+    "obsidian"
+    "burpsuite"
+  ];
+
   programs.steam.enable = true;
   programs.weylus = {
     enable = true;
@@ -10,7 +21,7 @@
     openFirewall = true;
   };
   programs.gnupg.agent.enable = true;
-  services.flatpak.enable = true;
+  # services.flatpak.enable = true;
   services.blueman.enable = true;
   services.dictd = {
     enable = true;
@@ -58,7 +69,7 @@
     wget
       tmux
       gimp-with-plugins
-      gimpPlugins.resynthesizer
+      # gimpPlugins.resynthesizer
       gimpPlugins.gmic
       nufraw
       libreoffice
@@ -169,9 +180,9 @@
       #vim
       #strawberry-qt
 # new_pkg
-      (callPackage "${(builtins.fetchTarball {
-        url = "https://github.com/ryantm/agenix/archive/main.tar.gz";
-        sha256 = "sha256-Ks+p8geHkzSc2z51GOiugLDqxy8lgNhF/2o3Pc/a9VU=";
-        })}/pkgs/agenix.nix")
+      # (callPackage "${(builtins.fetchTarball {
+      #   url = "https://github.com/ryantm/agenix/archive/main.tar.gz";
+      #   sha256 = "sha256-Ks+p8geHkzSc2z51GOiugLDqxy8lgNhF/2o3Pc/a9VU=";
+      #   })}/pkgs/agenix.nix")
       ];
 }
