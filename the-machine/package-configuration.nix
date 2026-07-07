@@ -80,6 +80,10 @@
       ardour
       gnome-tweaks
       # kicad
+      castnow
+      gnomecast
+      gnome-network-displays
+      # mkchromecast
       devenv
       ripgrep
       libremines
@@ -87,6 +91,8 @@
       vlc
       waytrogen
       chafa
+      vim
+      powertop
       (callPackage ./derivations/hanabi.nix{}).hanabi
       gnomeExtensions.media-controls
       gnomeExtensions.desktop-clock
@@ -159,6 +165,7 @@
       rtl_433
       sdrpp
       multimon-ng
+      krita
       #vim
       #strawberry-qt
 # new_pkg

@@ -6,6 +6,11 @@ input "type:touchpad" {
     tap_button_map lrm
 }
 
+input "type:tablet_tool" {
+  #map_to_region 0 0 1000 1000
+  map_to_output eDP-1
+}
+
 # output eDP-1 {
 #  background /etc/nixos/backgrounds/castle.png fill
 # }

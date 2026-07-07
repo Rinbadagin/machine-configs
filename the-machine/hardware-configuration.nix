@@ -28,6 +28,10 @@
 	hardware.rtl-sdr.enable = true;
         hardware.opentabletdriver.enable = true;
         hardware.uinput.enable = true;
+	powerManagement = {
+		enable = true;
+		powertop.enable = true;
+	};
 
 	swapDevices =
 		[ { device = "/dev/disk/by-uuid/7913d425-be7e-4aad-8456-aa397abc2f1e"; }
@@ -52,12 +56,13 @@
 			extraPackages = with pkgs; [
         intel-compute-runtime-legacy1
 				vpl-gpu-rt
-        intel-media-driver
+        intel-media-driver # LIBVA_DRIVER_NAME=iHD
         intel-vaapi-driver
 			#	# intel-media-driver # LIBVA_DRIVER_NAME=iHD
-			#		vaapiIntel         # LIBVA_DRIVER_NAME=i965 (older but works better for Firefox/Chromium)
+# 					vaapiIntel         # LIBVA_DRIVER_NAME=i965 (older but works better for Firefox/Chromium)
 			#	# 	vaapiVdpau
 			#	# intel-vaapi-driver
 			];
 		};
+	environment.sessionVariables = { LIBVA_DRIVER_NAME = "iHD"; };
 }

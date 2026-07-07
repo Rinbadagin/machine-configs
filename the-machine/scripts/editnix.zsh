@@ -9,7 +9,7 @@ then
   if [[ $1 == "nocommit" ]];
   then
     # nocommit path goes here
-    sudo -- sh -c "vim /etc/nixos/"
+    codium --wait /etc/nixos/
     sudo -- sh -c "nixos-rebuild switch"
     echo "Did the thing! have fun :3"
     exit 0
@@ -28,7 +28,8 @@ then
 fi
 
 # regular path here
-sudo -- sh -c "vim /etc/nixos/"
+codium --wait /etc/nixos/
+# sudo -- sh -c "vim /etc/nixos/"
 echo "Commit message?"
 msg=$(read -e)
 sudo -- sh -c "nixos-rebuild switch"
