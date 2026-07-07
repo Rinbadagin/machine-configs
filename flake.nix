@@ -1,6 +1,6 @@
 {
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-  inputs.nixpkgstwentyfiveeleven.url = "github:NixOS/nixpkgs/nixpkgs-25.11";
+  inputs.nixpkgstwentyfiveeleven.url = "github:NixOS/nixpkgs/25.11";
   inputs.disko.url = "github:nix-community/disko";
   inputs.disko.inputs.nixpkgs.follows = "nixpkgs";
   inputs.nixos-facter-modules.url = "github:numtide/nixos-facter-modules";
@@ -16,20 +16,20 @@
     ...
   }:
   {
-    nixosConfigurations.the-machine = nixpkgstwentyfiveeleven.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        # disko.nixosModules.disko
-        ./the-machine/configuration.nix
-        ./the-machine/hardware-configuration.nix
-        ./base/configuration.nix
-        agenix.nixosModules.default
+    # nixosConfigurations.the-machine = nixpkgstwentyfiveeleven.lib.nixosSystem {
+    #   system = "x86_64-linux";
+    #   modules = [
+    #     # disko.nixosModules.disko
+    #     ./the-machine/configuration.nix
+    #     ./the-machine/hardware-configuration.nix
+    #     ./base/configuration.nix
+    #     agenix.nixosModules.default
 
-        {
-          environment.systemPackages = [ agenix.packages."x86_64-linux".default ];
-        }
-      ];
-    };
+    #     {
+    #       environment.systemPackages = [ agenix.packages."x86_64-linux".default ];
+    #     }
+    #   ];
+    # };
 
     nixosConfigurations.desk-friend = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
