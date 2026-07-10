@@ -207,15 +207,15 @@
 
    networking.firewall.enable = false;
 
-   age.secrets = let
-     secrets = import ./secrets/secrets.nix;
-   in
-     builtins.mapAttrs (name: attrs: {
-       file = ./secrets/${name};
-       owner = attrs.owner or "root";
-       group = attrs.group or "root";
-       mode = attrs.mode or "0400";
-     }) secrets;
+   #age.secrets = let
+   #  secrets = import ./secrets/secrets.nix;
+   #in
+   #  builtins.mapAttrs (name: attrs: {
+   #    file = ./secrets/${name};
+   #    owner = attrs.owner or "root";
+   #    group = attrs.group or "root";
+   #    mode = attrs.mode or "0400";
+   #  }) secrets;
 
    services.openssh = {
      enable = true;
