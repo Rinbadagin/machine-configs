@@ -56,7 +56,7 @@
  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
  # Enable networking
-     networking.networkmanager.enable = true;
+     # networking.networkmanager.enable = true;
      networking.nameservers = [ "1.1.1.1" "9.9.9.9" ];
 
      networking = {
@@ -143,10 +143,11 @@
      settings = {                                                           
        default_session = {                                                  
          command = 
-           let art = "\"
-           ${ builtins.readFile "/etc/nixos/boot/login-prompt" }
-           \""; 
-         in "${pkgs.greetd.tuigreet}/bin/tuigreet --greeting ${art} --greet-align left
+         #  let art = "\"
+         #  ${ builtins.readFile "./boot/login-prompt" }
+         #  \""; 
+         # in 
+"${pkgs.greetd.tuigreet}/bin/tuigreet --greeting 'hello' --greet-align left
            --time --cmd 'dbus-run-session sway'";
          user = "greeter";                                                  
        };                                                                   
@@ -221,7 +222,7 @@
      settings = {
        PasswordAuthentication = false;
        KbdInteractiveAuthentication = false;
-       PermitRootLogin = "no";
+       # PermitRootLogin = "no";
        AllowUsers = [ "klara" ];
      };
    };
