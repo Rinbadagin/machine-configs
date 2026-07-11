@@ -1,7 +1,7 @@
 { lib, ... }:
 {
   # for MC
-  networking.firewall.allowedTCPPorts = [ 25565 6666 25566 ];
+  networking.firewall.allowedTCPPorts = [ 25565 6666 25566 6969 ];
 
   # for Avocado
   users.users.avocado = {
