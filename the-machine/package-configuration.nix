@@ -12,6 +12,7 @@
     "zoom"
     "obsidian"
     "burpsuite"
+    "vintagestory"
   ];
 
   programs.steam.enable = true;
@@ -177,6 +178,7 @@
       sdrpp
       multimon-ng
       krita
+      vintagestory
       #vim
       #strawberry-qt
 # new_pkg
