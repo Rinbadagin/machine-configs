@@ -69,6 +69,7 @@ services.desktopManager.plasma6.enable = true;
           origin_pin_allowed = "wan"
           wan_encryption_mode = 0
           lan_encryption_mode = 0
+          csrf_allowed_origins = localhost,desk-friend
           ''; in {
             ExecStart = "${config.security.wrapperDir}/sunshine ${sunshineConfigFile}/config/sunshine.conf";
             Restart = "on-failure";
