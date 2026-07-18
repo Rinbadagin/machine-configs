@@ -17,7 +17,8 @@
     firewall = {
       # from https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/networking/cluster/k3s/docs/USAGE.md
       # for k3s inbound, 6443
-      allowedTCPPorts = [ 443 80 ];
+      allowedTCPPorts = [ 443 80 47990 47989 48010 47998 47999 48000 ];
+      allowedUDPPorts = [ 47990 47989 48010 47998 47999 48000 ];
     };
   };
 
