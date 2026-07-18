@@ -13,7 +13,6 @@ services.desktopManager.plasma6.enable = true;
 
   services.xserver = {
         enable = true;
-        videoDrivers = ["nvidia"];
         
 #        displayManager.startx.enable = true;
         # Dummy screen
@@ -27,13 +26,13 @@ services.desktopManager.plasma6.enable = true;
             Option         "DPMS"
         '';
 
-        deviceSection = ''
-            VendorName "NVIDIA Corporation"
-            Option      "AllowEmptyInitialConfiguration"
-            Option      "ConnectedMonitor" "DVI-D-0"
-            Option      "CustomEDID" "DFP-0"
+        # deviceSection = ''
+        #     VendorName "NVIDIA Corporation"
+        #     Option      "AllowEmptyInitialConfiguration"
+        #     Option      "ConnectedMonitor" "DVI-D-0"
+        #     Option      "CustomEDID" "DFP-0"
 
-        '';
+        # '';
 
         screenSection = ''
             DefaultDepth    24

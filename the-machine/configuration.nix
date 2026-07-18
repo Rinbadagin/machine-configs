@@ -147,7 +147,7 @@
          #  ${ builtins.readFile "./boot/login-prompt" }
          #  \""; 
          # in 
-"${pkgs.greetd.tuigreet}/bin/tuigreet --greeting 'hello' --greet-align left
+"${pkgs.tuigreet}/bin/tuigreet --greeting 'hello' --greet-align left
            --time --cmd 'dbus-run-session sway'";
          user = "greeter";                                                  
        };                                                                   

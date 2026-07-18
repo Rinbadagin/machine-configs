@@ -10,7 +10,7 @@
     (modulesPath + "/installer/scan/not-detected.nix")
       (modulesPath + "/profiles/qemu-guest.nix")
       ./disk-config.nix
-      # ./ghost-monitor.nix
+      ./ghost-monitor.nix
   ];
 
   networking = {
