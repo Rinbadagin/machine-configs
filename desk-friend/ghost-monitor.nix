@@ -34,7 +34,7 @@
         deviceSection = ''
             VendorName "NotAReal Corporation"
             Option      "AllowEmptyInitialConfiguration"
-            Option      "ConnectedMonitor" "DVI-D-0"
+            Option      "ConnectedMonitor" "Screen 0"
             Option      "CustomEDID" "DFP-0"
 
         '';
