@@ -3,16 +3,21 @@
   # Also referenced in the configuration of desk-friend
   # Should really be in its own dir/part of base and selectively included
   # Any changes should be checked there too
-services.desktopManager.plasma6.enable = true;
+    services.desktopManager.plasma6.enable = true;
   
-  services.displayManager = {
-    defaultSession = "plasmax11";
-    autoLogin.enable = true;
-    autoLogin.user = "klara";
-  };
+    services.displayManager = {
+        defaultSession = "plasmax11";
+        autoLogin.enable = true;
+        autoLogin.user = "klara";
+    };
 
   services.xserver = {
         enable = true;
+
+        xkb = {
+        layout = "nz";
+        variant = "";
+        };
         
 #        displayManager.startx.enable = true;
         # Dummy screen
@@ -26,13 +31,13 @@ services.desktopManager.plasma6.enable = true;
             Option         "DPMS"
         '';
 
-        # deviceSection = ''
-        #     VendorName "NVIDIA Corporation"
-        #     Option      "AllowEmptyInitialConfiguration"
-        #     Option      "ConnectedMonitor" "DVI-D-0"
-        #     Option      "CustomEDID" "DFP-0"
+        deviceSection = ''
+            VendorName "NotAReal Corporation"
+            Option      "AllowEmptyInitialConfiguration"
+            Option      "ConnectedMonitor" "DVI-D-0"
+            Option      "CustomEDID" "DFP-0"
 
-        # '';
+        '';
 
         screenSection = ''
             DefaultDepth    24
