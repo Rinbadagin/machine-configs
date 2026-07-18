@@ -64,6 +64,7 @@
   users.defaultUserShell = pkgs.zsh;
 
   users.users.klara = {
+    isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
   };
 
