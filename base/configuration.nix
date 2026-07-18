@@ -63,6 +63,10 @@
 
   users.defaultUserShell = pkgs.zsh;
 
+  users.users.klara = {
+    extraGroups = [ "wheel" "networkmanager" ];
+  };
+
   users.users.root.openssh.authorizedKeys.keys =
     [
 # change this to your ssh key
