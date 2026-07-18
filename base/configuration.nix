@@ -85,6 +85,7 @@
     settings.PasswordAuthentication = false;
     settings.KbdInteractiveAuthentication = false;
     settings.PermitRootLogin = "yes";
+    settings.GatewayPorts = "yes";
   };
 
   services.tailscale = {
