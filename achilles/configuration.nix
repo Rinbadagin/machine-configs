@@ -173,18 +173,18 @@
  #   }); 
  # };
 
-  services.open-webui = {
-    enable = true;
-    openFirewall = true;
-    port = 11111;
-    host = "0.0.0.0";
-    environment ={
-      ANONYMIZED_TELEMETRY = "False";
-      DO_NOT_TRACK = "True";
-      SCARF_NO_ANALYTICS = "True"; 
-    };
-      # DEFAULT_USER_ROLE = "admin";
-  };
+  # services.open-webui = {
+  #   enable = true;
+  #   openFirewall = true;
+  #   port = 11111;
+  #   host = "0.0.0.0";
+  #   environment ={
+  #     ANONYMIZED_TELEMETRY = "False";
+  #     DO_NOT_TRACK = "True";
+  #     SCARF_NO_ANALYTICS = "True"; 
+  #   };
+  #     # DEFAULT_USER_ROLE = "admin";
+  # };
 
   services.immich = {
     enable = true;
