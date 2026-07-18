@@ -34,6 +34,7 @@
     pkgs.nfs-utils
     pkgs.ncdu
     pkgs.powertop
+    pkgs.htop
     pkgs.vim
     pkgs.tmux
   ];

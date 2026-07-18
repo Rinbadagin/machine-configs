@@ -549,7 +549,7 @@
 
        ];
        })
-       xorg.xrandr
+       xrandr
        efibootmgr
        # cudatoolkit
   oci-cli
