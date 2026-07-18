@@ -9,9 +9,12 @@ else
   flake=$1
 fi
 
-if [ -z "$2" ]; then
+if [ -z "$1" ] && [ -z "$2" ]; then
   echo "User@host?"
   host=$(read -e)
+elif [ -z "$1" ]; then
+  echo "Trying root@$flake as host..."
+  host="root@$flake"
 else
   host=$2
 fi
