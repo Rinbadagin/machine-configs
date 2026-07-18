@@ -69,6 +69,10 @@
     extraGroups = [ "wheel" "networkmanager" ];
   };
 
+  nix.extraOptions = ''
+    trusted-users = root klara
+    '';
+
   users.users.root.openssh.authorizedKeys.keys =
     [
 # change this to your ssh key
