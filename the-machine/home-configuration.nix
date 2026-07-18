@@ -64,10 +64,6 @@
       };
     };
     programs.zsh = {
-      enable = true;
-      autosuggestion.enable = true;
-      enableCompletion = true;
-      history.size = 1000000;
       initContent = lib.mkOrder 1500 ''
         source /etc/nixos/scripts/runtmux.zsh
 
@@ -84,11 +80,6 @@
         getweather = "firefox https://www.metservice.com/maps-radar/rain/forecast/3-days";
         swayc = "firefox https://wiki.garudalinux.org/en/sway-cheatsheet";
         ncatl = "ncat -lnvp";
-      };
-      oh-my-zsh = {
-        enable = true;
-        theme = "agnoster";
-        plugins = [ "aliases" "git" "colorize" ];
       };
     };
     home.stateVersion = "25.05";

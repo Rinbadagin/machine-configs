@@ -38,6 +38,21 @@
     pkgs.tmux
   ];
 
+  programs.zsh = {
+    enable = true;
+    autosuggestions.enable = true;
+    enableCompletion = true;
+    histSize = 1000000;
+    shellAliases = {
+      rebuild = "cd ~/machine-configs && nixos-rebuild switch --flake \".#$(hostname)\"";
+    };
+    ohMyZsh= {
+      enable = true;
+      theme = "agnoster";
+      plugins = [ "aliases" "git" "colorize" ];
+    };
+  };
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.optimise.automatic = true;
   nix.optimise.dates = [ "03:45" ];
@@ -45,6 +60,8 @@
   nix.gc.automatic = true;
   nix.gc.dates = "daily";
   nix.gc.options = "--delete-older-than +5"; 
+
+  users.defaultUserShell = pkgs.zsh;
 
   users.users.root.openssh.authorizedKeys.keys =
     [
