@@ -44,7 +44,7 @@
     enableCompletion = true;
     histSize = 1000000;
     shellAliases = {
-      rebuild = "cd ~/machine-configs && nixos-rebuild switch --flake \".#$(hostname)\"";
+      rebuild = "cd ~/machine-configs && git pull && nixos-rebuild switch --flake \".#$(hostname)\"";
     };
     ohMyZsh= {
       enable = true;
