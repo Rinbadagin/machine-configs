@@ -48,7 +48,7 @@ services.desktopManager.plasma6.enable = true;
         owner = "root";
         group = "root";
         capabilities = "cap_sys_admin+p";
-        source = "${ pkgs.sunshine.override({ config.cudaSupport = true; }) }/bin/sunshine";
+        source = "${ pkgs.sunshine }/bin/sunshine";
     };
 
     # Inspired from https://github.com/LizardByte/Sunshine/blob/5bca024899eff8f50e04c1723aeca25fc5e542ca/packaging/linux/sunshine.service.in
