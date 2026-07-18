@@ -31,8 +31,9 @@
 				gst_all_1.gst-plugins-ugly
 # Plugins to reuse ffmpeg to play almost every video format
 				gst_all_1.gst-libav
-# Support the Video Audio (Hardware) Acceleration API
-				gst_all_1.gst-vaapi
+				# removed due to ' error: 'gst_all_1.gst-vaapi' has been removed in GStreamer 1.28. Users are recommended to switch to gst-plugins-bad, however it is not an in-place upgrade.'
+# # Support the Video Audio (Hardware) Acceleration API
+# 				gst_all_1.gst-vaapi
 #    gst_all_1.gst-plugins-rs
 				clapper
 				gjs
