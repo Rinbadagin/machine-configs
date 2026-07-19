@@ -74,7 +74,7 @@
           origin_pin_allowed = "wan"
           wan_encryption_mode = 0
           lan_encryption_mode = 0
-          csrf_allowed_origins = localhost,desk-friend
+          csrf_allowed_origins = https://localhost, https://desk-friend, https://localhost, https://127.0.0.1, https://[::1]
           ''; in {
             ExecStart = "${config.security.wrapperDir}/sunshine ${sunshineConfigFile}/config/sunshine.conf";
             Restart = "on-failure";
