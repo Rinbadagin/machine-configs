@@ -60,7 +60,7 @@
 
   nix.gc.automatic = true;
   nix.gc.dates = "daily";
-  nix.gc.options = "--delete-older-than +5"; 
+  nix.gc.options = "--delete-older-than 5d"; 
 
   users.defaultUserShell = pkgs.zsh;
 
