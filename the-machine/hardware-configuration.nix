@@ -30,7 +30,7 @@
         hardware.uinput.enable = true;
 	powerManagement = {
 		enable = true;
-		powertop.enable = true;
+		# powertop.enable = true;
 	};
 
 	swapDevices =

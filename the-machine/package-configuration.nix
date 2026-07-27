@@ -179,6 +179,8 @@
       multimon-ng
       krita
       vintagestory
+      espeak
+      strawberry
       #vim
       #strawberry-qt
 # new_pkg
