@@ -181,6 +181,10 @@
       vintagestory
       espeak
       strawberry
+      gnumake
+      gcc
+      gcc-arm-embedded
+      dtc
       #vim
       #strawberry-qt
 # new_pkg

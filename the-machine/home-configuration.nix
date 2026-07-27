@@ -29,7 +29,7 @@
 # from: https://slar.se/configuring-touchpad-in-sway.html
 # swaymsg -t get_inputs is handy here
       text = ''
-        include /etc/nixos/sway/config
+        include ~/machine-configs/the-machine/sway/config
         '';
     };
 
@@ -65,12 +65,12 @@
     };
     programs.zsh = {
       initContent = lib.mkOrder 1500 ''
-        source /etc/nixos/scripts/runtmux.zsh
+        source ~/machine-configs/the-machine/scripts/runtmux.zsh
 
-        source /etc/nixos/scripts/zsh-motd.zsh
+        source ~/machine-configs/the-machine/scripts/zsh-motd.zsh
         '';
       shellAliases = {
-        editnix = "/etc/nixos/scripts/editnix.zsh";
+        editnix = "~/machine-configs/the-machine/scripts/editnix.zsh";
         tess = "f(){tesseract -l eng $@ | echo}f";
         note = "mkdir -p ~/notes/ && vim ~/notes/";
         proxyme = "sshuttle -r u0_a456@192.168.239.153:8022 0/0";

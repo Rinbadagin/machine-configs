@@ -9,7 +9,7 @@ then
   if [[ $1 == "nocommit" ]];
   then
     # nocommit path goes here
-    codium --wait /etc/nixos/
+    codium --wait ~/machine-configs
     sudo -- sh -c "nixos-rebuild switch"
     echo "Did the thing! have fun :3"
     exit 0
@@ -18,7 +18,7 @@ then
     echo "Commit message?"
     msg=$(read -e)
     sudo -- sh -c "nixos-rebuild switch"
-    (cd /etc/nixos/ && git add . && git commit -m "$msg" && git push)
+    (cd ~/machine-configs && git add . && git commit -m "$msg" && git push)
     echo "Commited $msg"
     exit 0
   else
@@ -28,10 +28,10 @@ then
 fi
 
 # regular path here
-codium --wait /etc/nixos/
+codium --wait ~/machine-configs
 # sudo -- sh -c "vim /etc/nixos/"
 echo "Commit message?"
 msg=$(read -e)
 sudo -- sh -c "nixos-rebuild switch"
-(cd /etc/nixos/ && git add . && git commit -m "$msg" && git push)
+(cd ~/machine-configs && git add . && git commit -m "$msg" && git push)
 echo "Commited $msg"
