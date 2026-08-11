@@ -56,7 +56,6 @@
     extraUpFlags = [ "--login-server" "https://hs.fem.nz/" ];
   };
 
-
   services.logind.settings.Login = {
     HandlePowerKey = "ignore";
   };
