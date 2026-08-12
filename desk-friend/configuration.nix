@@ -165,5 +165,26 @@
     extraGroups = [ "qbittorrent" ];
   };
 
+  services.grafana = {
+    enable = true;
+    settings = {
+      server = {
+        http_addr = "0.0.0.0";
+        http_port = 3000;
+        enforce_domain = true;
+        enable_gzip = true;
+        domain = "desk-friend";
+
+        # Alternatively, if you want to serve Grafana from a subpath:
+        # domain = "your.domain";
+        # root_url = "https://your.domain/grafana/";
+        # serve_from_sub_path = true;
+      };
+
+      # Prevents Grafana from phoning home
+      #analytics.reporting_enabled = false;
+    };
+  };
+
   system.stateVersion = "25.05";
 }
