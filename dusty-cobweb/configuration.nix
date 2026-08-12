@@ -52,23 +52,23 @@
     };
   };
 
-  services.prometheus = {
-    enable = true;
-    globalConfig.scrape_interval = "1m";
-    scrapeConfigs = [
-      {
-        job_name = "node";
-        static_configs = [{
-          targets = [
-            "localhost:${toString config.services.prometheus.exporters.node.port}"
-            "desk-friend:${toString config.services.prometheus.exporters.node.port}"
-            "achilles:${toString config.services.prometheus.exporters.node.port}"
-            "the-machine:${toString config.services.prometheus.exporters.node.port}"
-            ];
-        }];
-      }
-    ];
-  };
+  # services.prometheus = {
+  #   enable = true;
+  #   globalConfig.scrape_interval = "1m";
+  #   scrapeConfigs = [
+  #     {
+  #       job_name = "node";
+  #       static_configs = [{
+  #         targets = [
+  #           "localhost:${toString config.services.prometheus.exporters.node.port}"
+  #           "desk-friend:${toString config.services.prometheus.exporters.node.port}"
+  #           "achilles:${toString config.services.prometheus.exporters.node.port}"
+  #           "the-machine:${toString config.services.prometheus.exporters.node.port}"
+  #           ];
+  #       }];
+  #     }
+  #   ];
+  # };
 
 
   system.stateVersion = "25.05";
