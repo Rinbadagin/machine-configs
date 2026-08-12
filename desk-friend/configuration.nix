@@ -171,7 +171,7 @@
       security.secret_key = "SW2YcwTIb9zpOOhoPsMm";
       server = {
         http_addr = "0.0.0.0";
-        http_port = 3000;
+        http_port = 3030;
         enforce_domain = true;
         enable_gzip = true;
         domain = "desk-friend";
