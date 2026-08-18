@@ -7,7 +7,6 @@
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "steam"
     "steam-unwrapped"
-    "RuneScape"
     "runescape-launcher"
     "zoom"
     "obsidian"
@@ -124,7 +123,6 @@
       runelite
       (bolt-launcher.override { enableRS3 = true; })
       sshuttle
-      runescape
       audacity
       activitywatch
       android-tools
