@@ -1,6 +1,6 @@
 {
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-  inputs.nixpkgstwentyfiveeleven.url = "github:NixOS/nixpkgs/25.11";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/26.05";
+  # inputs.nixpkgstwentyfiveeleven.url = "github:NixOS/nixpkgs/25.11";
   inputs.disko.url = "github:nix-community/disko";
   inputs.disko.inputs.nixpkgs.follows = "nixpkgs";
   inputs.nixos-facter-modules.url = "github:numtide/nixos-facter-modules";
@@ -25,7 +25,7 @@
     ...
   }:
   {
-    nixosConfigurations.the-machine = nixpkgstwentyfiveeleven.lib.nixosSystem {
+    nixosConfigurations.the-machine = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         disko.nixosModules.disko
