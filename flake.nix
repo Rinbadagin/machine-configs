@@ -17,7 +17,7 @@
   outputs =
   {
     nixpkgs,
-    nixpkgstwentyfiveeleven,
+    # nixpkgstwentyfiveeleven,
     disko,
     nixos-facter-modules,
     agenix,
