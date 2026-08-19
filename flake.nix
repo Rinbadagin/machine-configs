@@ -1,5 +1,5 @@
 {
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/26.05";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/master";
   # inputs.nixpkgstwentyfiveeleven.url = "github:NixOS/nixpkgs/25.11";
   inputs.disko.url = "github:nix-community/disko";
   inputs.disko.inputs.nixpkgs.follows = "nixpkgs";
@@ -7,7 +7,7 @@
   inputs.agenix.inputs.nixpkgs.follows = "nixpkgs";
   inputs.agenix.inputs.darwin.follows = "nixpkgs";
 
-  inputs.home-manager.url = "https://github.com/nix-community/home-manager/archive/release-26.05.tar.gz";
+  inputs.home-manager.url = "https://github.com/nix-community/home-manager/archive/master.tar.gz";
   inputs.home-manager.inputs.nixpkgs.follows = "nixpkgs";
   inputs.agenix.inputs.home-manager.follows = "home-manager";
 

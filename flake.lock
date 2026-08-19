@@ -54,28 +54,28 @@
         ]
       },
       "locked": {
-        "lastModified": 1787146702,
-        "narHash": "sha256-YbRcLdU/yK4gWsQg7V8WTKZHfXL33g8+wSFUX3wyevs=",
+        "lastModified": 1787176219,
+        "narHash": "sha256-djoRr6jBpe35q/0JwAvXpFXg1Ktf+X54NU2RLR7wnHw=",
         "type": "tarball",
-        "url": "https://github.com/nix-community/home-manager/archive/release-26.05.tar.gz"
+        "url": "https://github.com/nix-community/home-manager/archive/master.tar.gz"
       },
       "original": {
         "type": "tarball",
-        "url": "https://github.com/nix-community/home-manager/archive/release-26.05.tar.gz"
+        "url": "https://github.com/nix-community/home-manager/archive/master.tar.gz"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1780145889,
-        "narHash": "sha256-md0zn0RnwNvPyASas1yG5YUuwQ4ALA6ucL50l0DvqCo=",
+        "lastModified": 1787182185,
+        "narHash": "sha256-QxOJvP7eynvfXM2LS/4eMeEEubnuQjKJ3teqZZnsvrA=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "8c50a710ddca43d7a530fb805ad55bde8d0141c5",
+        "rev": "f55d4146cd30dd8f48af28ade46de0cf03af3414",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "26.05",
+        "ref": "master",
         "repo": "nixpkgs",
         "type": "github"
       }
