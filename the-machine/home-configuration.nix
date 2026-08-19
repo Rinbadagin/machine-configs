@@ -1,10 +1,6 @@
 { config, pkgs, lib, security, ... }:
 {
   imports = [
-      (import "${(builtins.fetchTarball {
-  url = "https://github.com/nix-community/home-manager/archive/release-26.05.tar.gz";
-  sha256 = "1308p5ir11azagkx9cvb3812n2l9q8419w1v3ff77vzy8rp5myw5";
-  })}/nixos")
       ./modules/oneko_start.nix
       # inputs.nixvim.homeModules.nixvim
   ];
