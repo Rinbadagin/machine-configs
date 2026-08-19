@@ -76,7 +76,7 @@
       intel-gpu-tools
       git
       # deadbeef
-      xorg.xbacklight
+      xbacklight
       prismlauncher
       file
       exiftool
