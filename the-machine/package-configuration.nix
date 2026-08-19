@@ -70,7 +70,6 @@
       gimp-with-plugins
       # gimpPlugins.resynthesizer
       gimpPlugins.gmic
-      nufraw
       libreoffice
       vulkan-tools
       intel-gpu-tools
@@ -121,7 +120,7 @@
       wine
       krakatau2
       runelite
-      (bolt-launcher.override { enableRS3 = true; })
+      # (bolt-launcher.override { enableRS3 = true; })
       sshuttle
       audacity
       activitywatch

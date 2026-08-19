@@ -605,7 +605,7 @@
     arduino
     arduino-ide
     firefox
-    (bolt-launcher.override { enableRS3 = true; })
+    # (bolt-launcher.override { enableRS3 = true; })
     (blender.override { cudaSupport = true; })
 # latest_package new_pkg latest_pkg new_package new_program latest_program
     ];
