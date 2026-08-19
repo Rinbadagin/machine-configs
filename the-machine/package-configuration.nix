@@ -145,7 +145,6 @@
       pcmanfm
       rclone
       signal-desktop
-      jetbrains.idea-oss
       obs-studio
       pavucontrol
       texstudio

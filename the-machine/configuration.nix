@@ -183,8 +183,12 @@
  # Install firefox.
    programs.firefox.enable = true;
 
- # Allow unfree packages
-   nixpkgs.config.allowUnfree = true;
+   nixpkgs.config = {
+    allowUnfree = true;
+      problems.handlers = {
+        paste.broken = "warn"; # or "ignore"
+      };
+    };
 
    nix.settings.trusted-users = [ "root" "klara" ];
 
