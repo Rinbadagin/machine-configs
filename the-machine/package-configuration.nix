@@ -95,7 +95,7 @@
       devenv
       ripgrep
       libremines
-      mpvpaper
+      # mpvpaper
       vlc
       waytrogen
       chafa
@@ -163,7 +163,7 @@
       moonlight-qt
       unzip
       ncdu
-      mpv
+      # mpv
       sshfs
       burpsuite
       nixfmt
