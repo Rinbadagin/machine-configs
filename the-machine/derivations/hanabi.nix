@@ -35,7 +35,7 @@
 # # Support the Video Audio (Hardware) Acceleration API
 # 				gst_all_1.gst-vaapi
 #    gst_all_1.gst-plugins-rs
-				clapper
+				# clapper
 				gjs
 				gtk4
 #    libadwaita
