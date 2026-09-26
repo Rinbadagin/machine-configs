@@ -138,21 +138,27 @@
    #  };
    # };
 
-   services.greetd = {                                                      
-     enable = true;                                                         
-     settings = {                                                           
-       default_session = {                                                  
-         command = 
-         #  let art = "\"
-         #  ${ builtins.readFile "./boot/login-prompt" }
-         #  \""; 
-         # in 
-"${pkgs.tuigreet}/bin/tuigreet --greeting 'hello' --greet-align left
-           --time --cmd 'dbus-run-session sway'";
-         user = "greeter";                                                  
-       };                                                                   
-     };                                                                     
-   };
+   #services.greetd = {                                                      
+    ## enable = true;                                                         
+    # settings = {                                                           
+   #    default_session = {                                                  
+   #      command = 
+   #      #  let art = "\"
+   #      #  ${ builtins.readFile "./boot/login-prompt" }
+   #      #  \""; 
+   #      # in 
+#"${pkgs.tuigreet}/bin/tuigreet --greeting 'hello' --greet-align left
+#           --time --cmd 'dbus-run-session sway'";
+#         user = "greeter";                                                  
+#       };                                                                   
+#     };                                                                     
+#   };
+
+
+programs.regreet = {
+	enable = true;
+};
+
 
  # Enable CUPS to print documents.
    services.printing.enable = true;
@@ -183,8 +189,12 @@
  # Install firefox.
    programs.firefox.enable = true;
 
- # Allow unfree packages
-   nixpkgs.config.allowUnfree = true;
+   nixpkgs.config = {
+    allowUnfree = true;
+      #problems.handlers = {
+      #  paste.broken = "warn"; # or "ignore"
+      #};
+    };
 
    nix.settings.trusted-users = [ "root" "klara" ];
 

@@ -1,10 +1,15 @@
 {
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-  inputs.nixpkgstwentyfiveeleven.url = "github:NixOS/nixpkgs/25.11";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/master";
+  # inputs.nixpkgstwentyfiveeleven.url = "github:NixOS/nixpkgs/25.11";
   inputs.disko.url = "github:nix-community/disko";
   inputs.disko.inputs.nixpkgs.follows = "nixpkgs";
-  inputs.nixos-facter-modules.url = "github:numtide/nixos-facter-modules";
   inputs.agenix.url = "github:ryantm/agenix";
+  inputs.agenix.inputs.nixpkgs.follows = "nixpkgs";
+  inputs.agenix.inputs.darwin.follows = "nixpkgs";
+
+  inputs.home-manager.url = "https://github.com/nix-community/home-manager/archive/master.tar.gz";
+  inputs.home-manager.inputs.nixpkgs.follows = "nixpkgs";
+  inputs.agenix.inputs.home-manager.follows = "home-manager";
 
   # inputs.nixvim = {
   #   url = "github:nix-community/nixvim";
@@ -17,15 +22,15 @@
   outputs =
   {
     nixpkgs,
-    nixpkgstwentyfiveeleven,
+    # nixpkgstwentyfiveeleven,
     disko,
-    nixos-facter-modules,
     agenix,
     # nixvim,
+    home-manager,
     ...
   }:
   {
-    nixosConfigurations.the-machine = nixpkgstwentyfiveeleven.lib.nixosSystem {
+    nixosConfigurations.the-machine = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         disko.nixosModules.disko
@@ -33,6 +38,7 @@
         ./the-machine/hardware-configuration.nix
         ./base/configuration.nix
         agenix.nixosModules.default
+        home-manager.nixosModules.default
 
         {
           environment.systemPackages = [ agenix.packages."x86_64-linux".default ];

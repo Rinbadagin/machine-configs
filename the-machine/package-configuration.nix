@@ -7,7 +7,6 @@
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "steam"
     "steam-unwrapped"
-    "RuneScape"
     "runescape-launcher"
     "zoom"
     "obsidian"
@@ -71,13 +70,12 @@
       gimp-with-plugins
       # gimpPlugins.resynthesizer
       gimpPlugins.gmic
-      nufraw
       libreoffice
       vulkan-tools
       intel-gpu-tools
       git
       # deadbeef
-      xorg.xbacklight
+      xbacklight
       prismlauncher
       file
       exiftool
@@ -92,13 +90,12 @@
       gnome-tweaks
       # kicad
       castnow
-      gnomecast
       gnome-network-displays
       # mkchromecast
       devenv
       ripgrep
       libremines
-      mpvpaper
+      # mpvpaper
       vlc
       waytrogen
       chafa
@@ -122,9 +119,8 @@
       wine
       krakatau2
       runelite
-      (bolt-launcher.override { enableRS3 = true; })
+      # (bolt-launcher.override { enableRS3 = true; })
       sshuttle
-      runescape
       audacity
       activitywatch
       android-tools
@@ -137,6 +133,7 @@
       wl-clipboard
       mako
       oculante
+      tuigreet
       swayosd
       upower
       networkmanager
@@ -148,7 +145,6 @@
       pcmanfm
       rclone
       signal-desktop
-      jetbrains.idea-community
       obs-studio
       pavucontrol
       texstudio
@@ -168,7 +164,7 @@
       moonlight-qt
       unzip
       ncdu
-      mpv
+      # mpv
       sshfs
       burpsuite
       nixfmt

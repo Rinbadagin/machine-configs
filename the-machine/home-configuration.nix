@@ -1,10 +1,6 @@
 { config, pkgs, lib, security, ... }:
 {
   imports = [
-      (import "${(builtins.fetchTarball {
-  url = "https://github.com/nix-community/home-manager/archive/release-25.11.tar.gz";
-  sha256 = "13fmry1jd0na71fxhzms9qf3ybj6shgvnphq4p1akxxmv44gzq20";
-  })}/nixos")
       ./modules/oneko_start.nix
       # inputs.nixvim.homeModules.nixvim
   ];
@@ -51,8 +47,8 @@
     };
     programs.git = {
       enable = true;
-      userName = "Rinbadagin";
-      extraConfig = {
+      settings = {
+        user.name = "Rinbadagin";
         init.defaultBranch = "main";
         safe.directory = "/etc/nixos";
       };
