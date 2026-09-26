@@ -67,9 +67,10 @@ services.desktopManager.plasma6.enable = true;
           sunshineConfigFile = pkgs.writeTextDir "config/sunshine.conf"
           ''
           origin_web_ui_allowed=wan
-          origin_pin_allowed = "wan"
+          origin_pin_allowed=wan
           wan_encryption_mode = 0
           lan_encryption_mode = 0
+          csrf_allowed_origins = http://achilles,http://192.0.2.3
           ''; in {
             ExecStart = "${config.security.wrapperDir}/sunshine ${sunshineConfigFile}/config/sunshine.conf";
             Restart = "on-failure";

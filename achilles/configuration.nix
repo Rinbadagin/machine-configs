@@ -8,11 +8,6 @@
     [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./ghost-monitor.nix
-# Home manager
-      (import "${(builtins.fetchTarball {
-  url = "https://github.com/nix-community/home-manager/archive/release-25.11.tar.gz";
-  sha256 = "13fmry1jd0na71fxhzms9qf3ybj6shgvnphq4p1akxxmv44gzq20";
-  })}/nixos")
     ];
   system.stateVersion = lib.mkForce "23.11"; # Did you read the comment?
 
@@ -609,7 +604,7 @@
     arduino
     arduino-ide
     firefox
-    (bolt-launcher.override { enableRS3 = true; })
+    # (bolt-launcher.override { enableRS3 = true; })
     (blender.override { cudaSupport = true; })
 # latest_package new_pkg latest_pkg new_package new_program latest_program
     ];
