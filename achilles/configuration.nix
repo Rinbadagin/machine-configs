@@ -607,6 +607,10 @@
     # (bolt-launcher.override { enableRS3 = true; })
     (blender.override { cudaSupport = true; })
 # latest_package new_pkg latest_pkg new_package new_program latest_program
+
+    # for steamtinkerlaunch
+    yad
+    xdotool
     ];
 
 # Some programs need SUID wrappers, can be configured further or are

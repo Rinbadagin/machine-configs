@@ -180,6 +180,7 @@
       gcc
       gcc-arm-embedded
       dtc
+      wpa_supplicant_gui
       #vim
       #strawberry-qt
 # new_pkg
